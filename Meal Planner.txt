@@ -4,13 +4,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Meal Plan</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- CSS INSIDE HTML -->
+  <style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        background-color: #006904;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: black;
+    }
+
+    .container {
+        background: orangered;
+        padding: 20px;
+        border-radius: 5px;
+        width: 350px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #28a745;
+        color: orange;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #218838;
+    }
+
+    select, input {
+        margin: 5px 0;
+        padding: 8px;
+        border-radius: 4px;
+        border: none;
+    }
+  </style>
 </head>
+
 <body>
   <div class="container">
     <h1>The Meal Plan</h1>
     <h3>By: Aren Jake Bautista</h3>
 
+    <!-- SIGNUP FORM -->
     <div id="form-container">
       <form id="signup-form" class="form">
         <h2>Sign Up</h2>
@@ -20,6 +73,7 @@
         <p>Already have an account? <a href="#" id="show-login">Login</a></p>
       </form>
 
+      <!-- LOGIN FORM -->
       <form id="login-form" class="form hidden">
         <h2>Login</h2>
         <input type="text" id="login-username" placeholder="Username" required />
@@ -29,6 +83,7 @@
       </form>
     </div>
 
+    <!-- MEAL PLAN SECTION -->
     <div id="meal-plan" class="hidden">
       <h2>Your Healthy Meal Plan</h2>
 
@@ -45,44 +100,35 @@
 
       <label for="breakfast">Breakfast:</label>
       <select id="breakfast">
-        <option>Arroz Caldo with Chicken and Egg</option>
-        <option>Champorado with Tuyo Flakes</option>
-        <option>Longsilog</option>
-        <option>Sardines with Misua Noodles</option>
-        <option>Pandesal with Kesong Puti and Fruit</option>
-        <option>Daing na Bangus</option>
+        <option>Egg & Toast</option>
+        <option>Fruit Salad</option>
+        <option>Oatmeal</option>
       </select>
 
       <label for="lunch">Lunch:</label>
       <select id="lunch">
-        <option>Tortang Talong (Eggplant Omelette) with Side Salad</option>
-        <option>Pescado en Escabeche (Sweet and Sour Fish)</option>
-        <option>Ginisang Sitaw at Kalabasa (Sautéed String Beans and Squash)</option>
-        <option>Chicken Binakol</option>
-        <option>Laing (Taro Leaves in Coconut Milk)</option>
-        <option>Fresh Lumpiang Ubod (Heart of Palm Spring Rolls)</option>
+        <option>Grilled Chicken</option>
+        <option>Vegetable Pasta</option>
+        <option>Fish & Rice</option>
       </select>
 
       <label for="dinner">Dinner:</label>
       <select id="dinner">
-        <option>Pinakbet (Vegetable Stew)</option>
-        <option>Chicken Tinola</option>
-        <option>Ginisang Monggo (Mung Bean Stew)</option>
-        <option>Grilled Fish with Ensaladang Talong</option>
-        <option>Adobong Kangkong (Water Spinach Adobo)</option>
-        <option>Sinigang na Hipon</option>
+        <option>Soup & Bread</option>
+        <option>Stir Fry Veggies</option>
+        <option>Steamed Fish</option>
       </select>
 
-      <button id="save-meal">Save Meal Plan</button>
-
-      <h3>Weekly Plan</h3>
-      <ul id="meal-list"></ul>
+      <button id="save">Save Meal</button>
       <button id="logout">Logout</button>
     </div>
+
   </div>
 
+  <!-- LINK JAVASCRIPT -->
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
